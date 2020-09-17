@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { signInWithGoogle } from '../firebase';
+import { signInWithGoogle, signOut } from '../firebase';
 class SignIn extends Component {
   render() {
     return (
@@ -10,15 +10,11 @@ class SignIn extends Component {
             src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Google-256.png"
             alt="pic"
           />
-          Sign in with Google
+          Sign In / Sign Up with Google
         </button>
-        <div style={{ textAlign: 'center', fontSize: 13 }}>OR</div>
-        <button className="btn basic-btn" onClick={signInWithGoogle}>
-          <img
-            src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Google-256.png"
-            alt="pic"
-          />
-          Sign up with Google
+        <br></br>
+        <button className="btn basic-btn" onClick={signOut}>
+          Logout
         </button>
       </div>
     );
