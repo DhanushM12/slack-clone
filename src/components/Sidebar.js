@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Sidebar extends Component {
   render() {
     return (
-      <div className="sidebar">
+      <div id="sidebar">
         <div className="user-profile">
           <div className="avatar">
             <img src="https://www.flaticon.com/svg/static/icons/svg/2919/2919600.svg" />
