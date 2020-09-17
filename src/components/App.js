@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { SignIn } from './';
+import { SignIn, Slack } from './';
 
 class App extends Component {
   render() {
@@ -9,6 +9,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/login" component={SignIn} />
           <Route exact path="/signup" component={SignIn} />
+          <Route exact path="/" component={Slack} />
         </Switch>
       </div>
     );
