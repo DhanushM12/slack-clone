@@ -2,6 +2,26 @@
 
 https://drive.google.com/file/d/1cQfs57tfIaGYXt4QQFNLnbIKoxY7weNY/view?usp=sharing
 
+## Project Folder Structure
+
+```
+slack-clone
+└─ src
+   ├─ components
+   │  ├─ App.js
+   │  ├─ index.js
+   │  ├─ MainContainer.js
+   │  ├─ Sidebar.js
+   │  ├─ SignIn.js
+   │  └─ Slack.js
+   ├─ firebase.js
+   ├─ index.css
+   ├─ index.js
+   └─ providers
+      └─ UserProvider.js
+
+```
+
 ## React JS
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
