@@ -11,8 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .signin-form {
+  /* border: 1px solid #e1e1e1; */
   padding: 20px 20px;
   padding-top: 10px;
   width: 400px;
@@ -22,10 +22,7 @@ code {
 }
 .signin-form h1 {
   margin: 15px 0;
-  margin: 15px 0;
   text-align: center;
-  text-align: center;
-  font-size: 25px;
   font-size: 25px;
   font-weight: 400;
 }
@@ -100,6 +97,10 @@ code {
 }
 #sidebar .channels-list {
   color: rgb(207, 195, 207);
+}
+#sidebar .channels-list li a {
+  color: rgb(207, 195, 207);
+  text-decoration: none;
 }
 #sidebar .channels-list li {
   padding: 7px 15px;

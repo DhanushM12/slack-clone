@@ -3,7 +3,7 @@ import { auth, createOrGetUserProfileDocument } from '../firebase';
 
 const initialUserState = { user: null, loading: true };
 
-export const UserContext = createContext();
+export const UserContext = createContext(initialUserState);
 
 class UserProvider extends Component {
   state = initialUserState;
@@ -16,23 +16,27 @@ class UserProvider extends Component {
         console.log('userRef', userRef);
         // Attach listener to listen to user changes in firestore
         userRef.onSnapshot((snapshot) => {
-          console.log('snapshot', snapshot);
-          console.log('snapshot data', snapshot.data);
+          // console.log('snapshot', snapshot);
+          // console.log('snapshot data', snapshot.data);
           this.setState({
             user: { uid: snapshot.id, ...snapshot.data() },
             loading: false,
           });
         });
       }
+      this.setState({ user: userAuth, loading: false });
     });
   }
 
   render() {
     //console.log('this.props', this.props);
+    //console.log('user', this.state.user);
+    const { user, loading } = this.state;
+    const { children } = this.props;
     return (
       <div>
-        <UserContext.Provider value={this.state}>
-          {this.props.children}
+        <UserContext.Provider value={{ user, loading }}>
+          {children}
         </UserContext.Provider>
       </div>
     );
